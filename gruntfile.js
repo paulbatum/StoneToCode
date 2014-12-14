@@ -6,15 +6,59 @@ var fs = require('fs'),
 module.exports = function(grunt) {
 
 	var keys = grunt.file.readJSON('./keys.json'),
-		modpack = grunt.file.readJSON('./modpack.json');
+		modpack = grunt.file.readJSON('./modpack.json'),
+		package = grunt.file.readJSON('./package.json');
 
 	var modFolder = 'mods',
 		configFolder = 'config',
-		binariesFolder = 'binaries',
-		buildFolder = 'build';
+		binariesFolder = 'binaries';
 
 	var blobService = azure.createBlobService(keys.accountName, keys.accessKey);
 
+	grunt.initConfig({		
+		zip: {
+			'client': {
+				cwd: 'build/client',
+				src: grunt.file.expand(['build/client/bin/**', 'build/client/mods/**', 'build/client/config/**']),
+		  		dest: util.format('build/StoneToCode-%s.zip', package.version)
+			}
+		},
+		unzip: {
+			'server-bin': {
+				src: path.join(binariesFolder, modpack.server.bin),
+				dest: 'build/server'
+			}
+		},
+		copy: {
+			'client': {
+				files: [ 
+					{ 
+						src: path.join(binariesFolder, modpack.client.bin), 
+						dest: 'build/client/bin/modpack.jar'
+					},
+					{ 
+						expand: true,
+						src: ['mods/**', 'config/**'], 
+						dest: 'build/client'
+					}					
+				]
+			},			
+			'server': {
+				files: [ 
+					{ 
+						expand: true,
+						src: ['mods/**', 'config/**'], 
+						dest: 'build/server'
+					},
+					{ 
+						expand: true,
+						src: ['server/**'], 
+						dest: 'build'
+					}	
+				]
+			},
+		}
+	});	
 	
 	grunt.registerTask('init', function() {		
 		
@@ -56,34 +100,15 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('clean', function() {		
-		grunt.file.delete(buildFolder);		
-	});
-
-	grunt.registerTask('buildClient', function() {		
-		var clientBuildFolder = path.join(buildFolder, 'client');
-
-		var sourceBinPath = path.join(binariesFolder, modpack.client.bin);
-		var targetBinPath = path.join(clientBuildFolder, 'bin', 'modpack.jar');
-		grunt.file.copy(sourceBinPath, targetBinPath);
-
-		// Copy mods
-		grunt.file.recurse(modFolder, function(abspath, rootdir, subdir, filename) {			
-			grunt.file.copy(abspath, path.join(clientBuildFolder, modFolder, subdir || '', filename));
-		});
-
-		// Copy config
-		grunt.file.recurse(configFolder, function(abspath, rootdir, subdir, filename) {			
-			grunt.file.copy(abspath, path.join(clientBuildFolder, configFolder, subdir || '', filename));
-		});
-	});
-
-	grunt.registerTask('buildServer', function() {
-		var serverBuildFolder = path.join(buildFolder, 'server');
-		grunt.file.mkdir(serverBuildFolder);
+		grunt.file.delete('build');
 	});
 
 	grunt.registerTask('getDeps', ['getBinaries', 'getMods']);
+	grunt.registerTask('buildServer', ['unzip:server-bin', 'copy:server']);
+	grunt.registerTask('buildClient', ['copy:client', 'zip:client']);
 	grunt.registerTask('build', ['buildClient', 'buildServer']);
 	grunt.registerTask('default', ['init', 'getDeps', 'build']);	
 		  
+  	grunt.loadNpmTasks('grunt-zip');
+  	grunt.loadNpmTasks('grunt-contrib-copy');
 };
