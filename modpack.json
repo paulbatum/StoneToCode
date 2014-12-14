@@ -1,0 +1,15 @@
+{
+	"server": {
+		"bin": "cauldronserver-1236.zip"		
+	},
+	"client": {
+		"bin": "forge-1.7.10-10.13.2.1236-universal.jar"		
+	},
+	"mods": [
+		"OpenComputers-MC1.7.10-1.4.1.14-universal.jar",
+		"MineTweaker3-1.7.10-3.0.9C.jar",
+		"CodeChickenCore-1.7.10-1.0.2.9-universal.jar",
+		"NotEnoughItems-1.7.10-1.0.2.15-universal.jar",
+		"InventoryTweaks-1.58-147.jar"
+	]	
+}

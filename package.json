@@ -1,0 +1,15 @@
+{
+  "name": "StoneToCode",
+  "version": "0.1.0",
+  "description": "some description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Batum",
+  "license": "MIT",
+  "dependencies": {
+    "azure-storage": "^0.4.1",
+    "grunt": "^0.4.5"
+  }
+}
