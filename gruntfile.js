@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 			'client': {
 				cwd: 'build/client',
 				src: grunt.file.expand(['build/client/bin/**', 'build/client/mods/**', 'build/client/config/**']),
-		  		dest: util.format('build/StoneToCode-%s.zip', package.version)
+		  		dest: util.format('build/%s-%s.zip', modpack.name, package.version)
 			}
 		},
 		unzip: {
