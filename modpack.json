@@ -4,7 +4,10 @@
 		"bin": "cauldronserver-1236.zip"		
 	},
 	"client": {
-		"bin": "forge-1.7.10-10.13.2.1236-universal.jar"		
+		"bin": "forge-1.7.10-10.13.2.1236-universal.jar",
+		"mods": [
+			"JourneyMap5.0.0RC6_Unlimited_MC1.7.10.jar"
+		]		
 	},
 	"mods": [
 		"OpenComputers-MC1.7.10-1.4.1.14-universal.jar",

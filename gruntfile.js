@@ -40,7 +40,12 @@ module.exports = function(grunt) {
 						expand: true,
 						src: ['mods/**', 'config/**'], 
 						dest: 'build/client'
-					}					
+					},
+					{ 
+						expand: true,
+						src: ['client/mods/**'], 
+						dest: 'build'
+					}
 				]
 			},			
 			'server': {
@@ -66,8 +71,14 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('getMods', function() {			
 		grunt.file.mkdir(modFolder);
-		grunt.log.writeln('Found %d mods', modpack.mods.length);
+		grunt.log.writeln('Found %d shared mods', modpack.mods.length);
 		grunt.task.run(modpack.mods.map(function(m) { return util.format('downloadFile:%s:%s',modFolder, m); }));		
+
+		var clientModFolder = 'client/mods';
+		grunt.file.mkdir(clientModFolder);
+		grunt.log.writeln('Found %d client mods', modpack.client.mods.length);
+		grunt.task.run(modpack.client.mods.map(function(m) { return util.format('downloadFile:%s:%s:%s',clientModFolder, m, modFolder); }));		
+
 	});
 
 	grunt.registerTask('getBinaries', function() {
@@ -76,7 +87,7 @@ module.exports = function(grunt) {
 		grunt.task.run(util.format('downloadFile:%s:%s', binariesFolder, modpack.server.bin));
 	});
 
-	grunt.registerTask('downloadFile', function(folder, filename) {
+	grunt.registerTask('downloadFile', function(folder, filename, container) {
 		var done = this.async();
 		var filePath = path.resolve(path.join(folder, filename));
 
@@ -86,7 +97,7 @@ module.exports = function(grunt) {
 		} else {		
 			var downloadTask = grunt.log.writeln('Downloading %s', filePath);
 			var stream = fs.createWriteStream(filePath);
-			blobService.getBlobToStream(folder, filename, stream, function(error, result, response){
+			blobService.getBlobToStream(container || folder, filename, stream, function(error, result, response){
 			  	if(!error) {			  		
 			    	downloadTask.ok();
 			  	} else {			  		
