@@ -1,19 +1,33 @@
 {
 	"name": "StoneToCode",
 	"server": {
-		"bin": "cauldronserver-1236.zip"		
+		"bin": "cauldronserver-1236.zip",
+		"mods": []	
 	},
 	"client": {
 		"bin": "forge-1.7.10-10.13.2.1236-universal.jar",
-		"mods": [
-			"JourneyMap5.0.0RC6_Unlimited_MC1.7.10.jar"
+		"mods": [	
+			"JourneyMap5.0.0RC6_Unlimited_MC1.7.10.jar",
+			"fastcraft-1.11.jar"
 		]		
 	},
 	"mods": [
-		"OpenComputers-MC1.7.10-1.4.1.14-universal.jar",
+		"OpenComputers-MC1.7.10-1.4.3.21-beta.1-universal.jar",
 		"MineTweaker3-1.7.10-3.0.9C.jar",
 		"CodeChickenCore-1.7.10-1.0.2.9-universal.jar",
 		"NotEnoughItems-1.7.10-1.0.2.15-universal.jar",
-		"InventoryTweaks-1.58-147.jar"
+		"InventoryTweaks-1.58-147.jar",
+		"appliedenergistics2-rv1-stable-1.jar",
+		"compactmachines-1.7.10-1.13.jar",
+		"BigReactors-0.4.1A2.jar",
+		"CoFHCore-[1.7.10]3.0.0B9-41.jar",
+		"EnderIO-1.7.10-2.2.6.317.jar",
+		"Waila-1.5.5_1.7.10.jar",
+		"HQM-The Journey (4.2.1).jar",
+		"TConstruct-1.7.10-1.8.1.jar",
+		"IguanaTinkerTweaks-1.7.10-2.1.0.jar",
+		"extrautilities-1.2.0.jar",
+		"Mantle-1.7.10-0.3.2.jar"
+
 	]	
 }
