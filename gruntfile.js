@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 					},
 					{ 
 						expand: true,
-						src: ['client/mods/**'], 
+						src: ['client/**'], 
 						dest: 'build'
 					}
 				]
@@ -108,10 +108,28 @@ module.exports = function(grunt) {
 			  	done();
 			});
 		}
-	});
+	});	
 
-	grunt.registerTask('clean', function() {		
-		grunt.file.delete('build');
+	grunt.registerTask('clean', function() {				
+		if(grunt.file.exists('build')) {
+			grunt.file.delete('build');
+		}		
+
+		cleanMods(modFolder, modpack.mods);
+		cleanMods('client/mods', modpack.client.mods);
+		cleanMods('server/mods', modpack.client.mods);
+
+
+		function cleanMods(folder, mods) {
+			if(grunt.file.exists(folder)) {
+				grunt.file.recurse(folder, function callback(abspath, rootdir, subdir, filename) {
+					if(mods.indexOf(filename) < 0) {
+						grunt.log.writeln("Deleting " + filename);
+						grunt.file.delete(abspath);
+					}
+				});
+			}
+		}
 	});
 
 	grunt.registerTask('getDeps', ['getBinaries', 'getMods']);
@@ -122,4 +140,6 @@ module.exports = function(grunt) {
 		  
   	grunt.loadNpmTasks('grunt-zip');
   	grunt.loadNpmTasks('grunt-contrib-copy');
+
+
 };
