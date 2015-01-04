@@ -14,8 +14,9 @@
 	"mods": [
 		"OpenComputers-MC1.7.10-1.4.3.21-beta.1-universal.jar",
 		"MineTweaker3-1.7.10-3.0.9C.jar",
-		"CodeChickenCore-1.7.10-1.0.2.9-universal.jar",
-		"NotEnoughItems-1.7.10-1.0.2.15-universal.jar",
+		"CodeChickenCore-1.7.10-1.0.4.29-universal.jar",
+		"NotEnoughItems-1.7.10-1.0.3.74-universal.jar",
+		"EnderStorage-1.7.10-1.4.5.27-universal.jar",
 		"InventoryTweaks-1.58-147.jar",
 		"appliedenergistics2-rv1-stable-1.jar",
 		"compactmachines-1.7.10-1.13.jar",
@@ -27,7 +28,10 @@
 		"TConstruct-1.7.10-1.8.1.jar",
 		"IguanaTinkerTweaks-1.7.10-2.1.0.jar",
 		"extrautilities-1.2.0.jar",
-		"Mantle-1.7.10-0.3.2.jar"
+		"Mantle-1.7.10-0.3.2.jar",
+		"BiomesOPlenty-1.7.10-2.1.0.1035-universal.jar",
+		"Pam's HarvestCraft 1.7.10f.jar",		
+		"Chisel 2-2.2.1.jar"
 
 	]	
 }
