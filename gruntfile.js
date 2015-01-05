@@ -72,17 +72,17 @@ module.exports = function(grunt) {
 	grunt.registerTask('getMods', function() {			
 		grunt.file.mkdir(modFolder);
 		grunt.log.writeln('Found %d shared mods', modpack.mods.length);
-		grunt.task.run(modpack.mods.map(function(m) { return util.format('downloadFile:%s:%s',modFolder, m); }));		
+		grunt.task.run(modpack.mods.map(function(m) { return util.format('downloadFile:%s:%s',modFolder, m.file); }));		
 
 		var clientModFolder = 'client/mods';
 		grunt.file.mkdir(clientModFolder);
 		grunt.log.writeln('Found %d client mods', modpack.client.mods.length);
-		grunt.task.run(modpack.client.mods.map(function(m) { return util.format('downloadFile:%s:%s:%s',clientModFolder, m, modFolder); }));		
+		grunt.task.run(modpack.client.mods.map(function(m) { return util.format('downloadFile:%s:%s:%s',clientModFolder, m.file, modFolder); }));		
 
 		var serverModFolder = 'server/mods';
 		grunt.file.mkdir(serverModFolder);
 		grunt.log.writeln('Found %d server mods', modpack.server.mods.length);
-		grunt.task.run(modpack.server.mods.map(function(m) { return util.format('downloadFile:%s:%s:%s',serverModFolder, m, modFolder); }));		
+		grunt.task.run(modpack.server.mods.map(function(m) { return util.format('downloadFile:%s:%s:%s',serverModFolder, m.file, modFolder); }));		
 
 	});
 
@@ -122,13 +122,14 @@ module.exports = function(grunt) {
 
 		cleanMods(modFolder, modpack.mods);
 		cleanMods('client/mods', modpack.client.mods);
-		cleanMods('server/mods', modpack.client.mods);
+		cleanMods('server/mods', modpack.server.mods);
 
 
 		function cleanMods(folder, mods) {
+			var modFiles = mods.map(function(m) { return m.file; });
 			if(grunt.file.exists(folder)) {
 				grunt.file.recurse(folder, function callback(abspath, rootdir, subdir, filename) {
-					if(mods.indexOf(filename) < 0) {
+					if(modFiles.indexOf(filename) < 0) {
 						grunt.log.writeln("Deleting " + filename);
 						grunt.file.delete(abspath);
 					}
