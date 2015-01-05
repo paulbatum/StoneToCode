@@ -2,7 +2,10 @@
 	"name": "StoneToCode",
 	"server": {
 		"bin": "cauldronserver-1236.zip",
-		"mods": []	
+		"mods": [
+			"MobiusCore-1.2.3_1.7.10.jar",
+			"Opis-1.2.3_1.7.10.jar"
+		]	
 	},
 	"client": {
 		"bin": "forge-1.7.10-10.13.2.1236-universal.jar",
@@ -31,7 +34,8 @@
 		"Mantle-1.7.10-0.3.2.jar",
 		"BiomesOPlenty-1.7.10-2.1.0.1035-universal.jar",
 		"Pam's HarvestCraft 1.7.10f.jar",		
-		"Chisel 2-2.2.1.jar"
-
+		"Chisel 2-2.2.1.jar",
+		"ThermalFoundation-[1.7.10]1.0.0RC1-17.jar",
+		"ThermalExpansion-[1.7.10]4.0.0B8-23.jar"
 	]	
 }

@@ -79,6 +79,11 @@ module.exports = function(grunt) {
 		grunt.log.writeln('Found %d client mods', modpack.client.mods.length);
 		grunt.task.run(modpack.client.mods.map(function(m) { return util.format('downloadFile:%s:%s:%s',clientModFolder, m, modFolder); }));		
 
+		var serverModFolder = 'server/mods';
+		grunt.file.mkdir(serverModFolder);
+		grunt.log.writeln('Found %d server mods', modpack.server.mods.length);
+		grunt.task.run(modpack.server.mods.map(function(m) { return util.format('downloadFile:%s:%s:%s',serverModFolder, m, modFolder); }));		
+
 	});
 
 	grunt.registerTask('getBinaries', function() {
