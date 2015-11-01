@@ -1,30 +1,20 @@
 {
 	"name": "StoneToCode",
 	"server": {
-		"bin": "cauldronserver-1236.zip",
-		"mods": [
-			{
-				"file": "MobiusCore-1.2.3_1.7.10.jar",
-				"type": "core"			
-			},
-			{
-				"file": "Opis-1.2.3_1.7.10.jar",
-				"type": "utility",
-				"description": "Tracks sources of server lag",
-				"dependsOn": "MobiusCore"
-			}					
+		"bin": "forgeserver-1481.zip",
+		"mods": [			
 		]	
 	},
 	"client": {
-		"bin": "forge-1.7.10-10.13.2.1236-universal.jar",
+		"bin": "forge-1.7.10-10.13.4.1481-1.7.10-universal.jar",
 		"mods": [
 			{
-				"file": "JourneyMap5.0.0RC6_Unlimited_MC1.7.10.jar",
+				"file": "journeymap-1.7.10-5.1.0rc5-unlimited.jar",
 				"type": "utility",
 				"description": "In game map that keeps track of what you've explored and provides a minimap"
 			},
 			{
-				"file": "fastcraft-1.11.jar",
+				"file": "fastcraft-1.21.jar",
 				"type": "utility",
 				"description": "Gives a pretty significant FPS boost"
 			}							
@@ -32,11 +22,11 @@
 	},
 	"mods": [
 		{
-			"file": "CodeChickenCore-1.7.10-1.0.4.29-universal.jar",
+			"file": "CodeChickenCore-1.7.10-1.0.7.46-universal.jar",
 			"type": "core"			
 		},
 		{
-			"file": "CoFHCore-[1.7.10]3.0.0B9-41.jar",
+			"file": "CoFHCore-[1.7.10]3.0.3-303.jar",
 			"type": "core"			
 		},
 		{
@@ -44,88 +34,90 @@
 			"type": "core"			
 		},
 		{
-			"file": "ThermalFoundation-[1.7.10]1.0.0RC1-17.jar",
+			"file": "ThermalFoundation-[1.7.10]1.2.0-102.jar",
 			"type": "core"			
 		},
 		{
-			"file": "MineTweaker3-1.7.10-3.0.9C.jar",
-			"type": "utility",
-			"description": "Recipe customization"
+			"file": "immibis-core-59.1.1.jar",
+			"type": "core"			
 		},
 		{
-			"file": "Waila-1.5.5_1.7.10.jar",
+			"file": "Waila-1.5.10_1.7.10.jar",
 			"type": "utility",
 			"description": "Provides a description of the block you are looking at",
 			"dependsOn": "NotEnoughItems"
 		},
 		{
-			"file": "NotEnoughItems-1.7.10-1.0.3.74-universal.jar",
+			"file": "WailaHarvestability-mc1.7.x-1.1.2.jar",
+			"type": "utility",
+			"description": "More walia enhancements",
+			"dependsOn": "Waila"
+		},
+		{
+			"file": "NotEnoughItems-1.7.10-1.0.5.111-universal.jar",
 			"type": "utility",
 			"description": "In game recipe lookup",
 			"dependsOn": "CodeChickenCore"
 		},
 		{
-			"file": "InventoryTweaks-1.58-147.jar",
+			"file": "NEIIntegration-MC1.7.10-1.0.11.jar",
+			"type": "utility",
+			"description": "NEI goodness?",
+			"dependsOn": "NotEnoughItems"
+		},
+		{
+			"file": "InventoryTweaks-1.59-dev-152.jar",
 			"type": "utility",
 			"description": "Inventory sorting, etc"
 		},
 		{
-			"file": "BigReactors-0.4.1A2.jar",
+			"file": "BigReactors-0.4.3A.jar",
 			"type": "feature",
 			"description": "Reactors and Turbines",
 			"dependsOn": "CoFHCore"
 		},
 		{
-			"file": "EnderStorage-1.7.10-1.4.5.27-universal.jar",
+			"file": "EnderStorage-1.7.10-1.4.7.36-universal.jar",
 			"type": "feature",
 			"description": "Multiple ender chests with remote access",
 			"dependsOn": "CodeChickenCore"
 		},
 		{
-			"file": "OpenComputers-MC1.7.10-1.4.3.21-beta.1-universal.jar",
+			"file": "OpenComputers-MC1.7.10-1.5.14.30-universal.jar",
 			"type": "feature",
 			"description": "Programmable computers!"
 		},
 		{
-			"file": "appliedenergistics2-rv1-stable-1.jar",
+			"file": "appliedenergistics2-rv2-stable-10.jar",
 			"type": "feature",
 			"description": "Store all your stuff in a searchable, automatable database"
 		},
 		{
-			"file": "compactmachines-1.7.10-1.13.jar",
-			"type": "feature",
-			"description": "Fit an entire room's worth of machines into a single block"
-		},
-		{
-			"file": "EnderIO-1.7.10-2.2.6.317.jar",
+			"file": "EnderIO-1.7.10-2.2.8.381.jar",
 			"type": "feature",
 			"description": "Fit many conduits into a single block"
 		},
 		{
-			"file": "SimplyJetpacks-MC1.7.10-1.3.2.jar",
+			"file": "SimplyJetpacks-MC1.7.10-1.5.1.jar",
 			"type": "feature",
 			"description": "Yep, jetpacks"
 		},				
 		{
-			"file": "ThermalExpansion-[1.7.10]4.0.0B8-23.jar",
+			"file": "ThermalExpansion-[1.7.10]4.0.3B1-218.jar",
 			"type": "feature",
 			"description": "Ore processing, power storage and generation, much more",
 			"dependsOn": "ThermalFoundation"
 		},
 		{
-			"file": "Pam's HarvestCraft 1.7.10f.jar",		
+			"file": "ThermalDynamics-[1.7.10]1.1.0-161.jar",
+			"type": "feature",
+			"description": "Pipes and stuff for thermal expansion",
+			"dependsOn": "ThermalFoundation"
+		},
+		{
+			"file": "Pam's HarvestCraft 1.7.10i.jar",
 			"type": "feature",
 			"description": "Vegetables, fruits and cooking recipies"
-		},
-		{
-			"file": "HQM-The Journey (4.2.1).jar",
-			"type": "feature",
-			"description": "Create in game quests"
-		},
-		{
-			"file": "extrautilities-1.2.0.jar",
-			"type": "feature",
-			"description": "A bunch of random useful stuff including builders wand, redstone clock, etc"
 		},
 		{
 			"file": "TConstruct-1.7.10-1.8.1.jar",
@@ -134,36 +126,37 @@
 			"dependsOn": "Mantle"
 		},
 		{
-			"file": "IguanaTinkerTweaks-1.7.10-2.1.0.jar",
+			"file": "TiCTooltips-mc1.7.10-1.2.5.jar",
 			"type": "feature",
-			"description": "Tools level up through use, non-tinkers tools dont work",
+			"description": "NEI tooltips for Tinkers",
 			"dependsOn": "TinkersConstruct"
 		},
 		{
-			"file": "BiomesOPlenty-1.7.10-2.1.0.1035-universal.jar",
-			"type": "aesthetic",
-			"description": "New biomes"
+			"file": "redlogic-59.1.11.jar",
+			"type": "feature",
+			"description": "Redstone logic and lamps",
+			"dependsOn": "Immibis"
 		},
 		{
-			"file": "BiblioCraft[v1.9.1][MC1.7.10].jar",
+			"file": "BiblioCraft[v1.10.6][MC1.7.10].jar",
 			"type": "aesthetic",
 			"description": "Furniture"
-		},
+		},	
 		{
-			"file": "BiblioWoods[BiomesOPlenty][v1.9].jar",
-			"type": "aesthetic",
-			"description": "Furniture",
-			"dependsOn": "BiomesOPlenty, BiblioCraft"
-		},		
-		{
-			"file": "Chisel 2-2.2.1.jar",
+			"file": "Chisel2-2.4.1.40.jar",
 			"type": "aesthetic",
 			"description": "Decorative blocks"
-		},		
+		},
 		{
-			"file": "Carpenter's Blocks v3.3.4.2 - MC 1.7.10.jar",
+			"file": "Decocraft-2.0.2_1.7.10.jar",
+			"type": "aesthetic",
+			"description": "Decorative blocks"
+		},				
+		{
+			"file": "Carpenter's Blocks v3.3.7 DEV - MC 1.7.10 (1).jar",
 			"type": "aesthetic",
 			"description": "Custom block shapes"
 		}
+
 	]	
 }
