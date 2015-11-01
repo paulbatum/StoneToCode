@@ -124,15 +124,21 @@
 			"description": "Vegetables, fruits and cooking recipies"
 		},
 		{
-			"file": "TConstruct-1.7.10-1.8.1.jar",
+			"file": "TConstruct-1.7.10-1.8.8.jar",
 			"type": "feature",
 			"description": "Tinkers Construct - Customizable tools",
 			"dependsOn": "Mantle"
 		},
 		{
 			"file": "TiCTooltips-mc1.7.10-1.2.5.jar",
-			"type": "feature",
+			"type": "utility",
 			"description": "NEI tooltips for Tinkers",
+			"dependsOn": "TinkersConstruct"
+		},
+		{
+			"file": "IguanaTinkerTweaks-1.7.10-2.1.5.jar",
+			"type": "feature",
+			"description": "Adds levelling for tools",
 			"dependsOn": "TinkersConstruct"
 		},
 		{
@@ -140,7 +146,7 @@
 			"type": "feature",
 			"description": "Redstone logic and lamps",
 			"dependsOn": "Immibis"
-		},
+		},		
 		{
 			"file": "GalacticraftCore-1.7-3.0.12.375.jar",
 			"type": "feature",
@@ -157,7 +163,17 @@
 			"file": "GraveStone-2.14.0.jar",
 			"type": "feature",
 			"description": "Don't lose your stuff when you die!"
-		},		
+		},
+		{
+			"file": "BiomesOPlenty-1.7.10-2.1.0.1462-universal.jar",
+			"type": "feature",
+			"description": "Lots of cool biomes"
+		},
+		{
+			"file": "extrautilities-1.2.12.jar",
+			"type": "feature",
+			"description": "A bunch of random useful stuff including builders wand, redstone clock, etc"
+		},						
 		{
 			"file": "BiblioCraft[v1.10.6][MC1.7.10].jar",
 			"type": "aesthetic",
