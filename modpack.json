@@ -46,6 +46,10 @@
 			"type": "core"			
 		},
 		{
+			"file": "OpenModsLib-1.7.10-0.8.jar",
+			"type": "core"			
+		},
+		{
 			"file": "Waila-1.5.10_1.7.10.jar",
 			"type": "utility",
 			"description": "Provides a description of the block you are looking at",
@@ -160,9 +164,10 @@
 			"dependsOn": "Galacticraft"
 		},
 		{
-			"file": "GraveStone-2.14.0.jar",
+			"file": "OpenBlocks-1.7.10-1.4.4.jar",
 			"type": "feature",
-			"description": "Don't lose your stuff when you die!"
+			"description": "Useful stuff including elevators and graves",
+			"dependsOn":"OpenMods"
 		},
 		{
 			"file": "BiomesOPlenty-1.7.10-2.1.0.1462-universal.jar",
