@@ -1,7 +1,7 @@
 {
 	"name": "StoneToCode",
 	"server": {
-		"bin": "forgeserver-1481.zip",
+		"bin": "forgeserver-1481-2.zip",
 		"mods": [			
 		]	
 	},
