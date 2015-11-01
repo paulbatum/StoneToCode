@@ -42,6 +42,10 @@
 			"type": "core"			
 		},
 		{
+			"file": "MicdoodleCore-1.7-3.0.12.375.jar",
+			"type": "core"			
+		},
+		{
 			"file": "Waila-1.5.10_1.7.10.jar",
 			"type": "utility",
 			"description": "Provides a description of the block you are looking at",
@@ -138,6 +142,23 @@
 			"dependsOn": "Immibis"
 		},
 		{
+			"file": "GalacticraftCore-1.7-3.0.12.375.jar",
+			"type": "feature",
+			"description": "SPACESHIPS!!",
+			"dependsOn": "MicdoodleCore"
+		},	
+		{
+			"file": "Galacticraft-Planets-1.7-3.0.12.375.jar",
+			"type": "feature",
+			"description": "Planets to visit with said spaceships!",
+			"dependsOn": "Galacticraft"
+		},
+		{
+			"file": "GraveStone-2.14.0.jar",
+			"type": "feature",
+			"description": "Don't lose your stuff when you die!"
+		},		
+		{
 			"file": "BiblioCraft[v1.10.6][MC1.7.10].jar",
 			"type": "aesthetic",
 			"description": "Furniture"
@@ -157,6 +178,5 @@
 			"type": "aesthetic",
 			"description": "Custom block shapes"
 		}
-
 	]	
 }
