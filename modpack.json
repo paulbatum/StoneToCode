@@ -87,7 +87,7 @@
 			"dependsOn": "CodeChickenCore"
 		},
 		{
-			"file": "OpenComputers-MC1.7.10-1.5.14.30-universal.jar",
+			"file": "OpenComputers-MC1.7.10-1.5.19.37-universal.jar",
 			"type": "feature",
 			"description": "Programmable computers!"
 		},
