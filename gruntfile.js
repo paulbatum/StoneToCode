@@ -142,7 +142,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('buildServer', ['unzip:server-bin', 'copy:server']);
 	grunt.registerTask('buildClient', ['copy:client', 'zip:client']);
 	grunt.registerTask('build', ['buildClient', 'buildServer']);
-	grunt.registerTask('default', ['init', 'getDeps', 'build']);	
+	grunt.registerTask('default', ['clean', 'init', 'getDeps', 'build']);	
 		  
   	grunt.loadNpmTasks('grunt-zip');
   	grunt.loadNpmTasks('grunt-contrib-copy');

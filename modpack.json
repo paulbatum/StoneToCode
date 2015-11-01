@@ -173,7 +173,12 @@
 			"file": "extrautilities-1.2.12.jar",
 			"type": "feature",
 			"description": "A bunch of random useful stuff including builders wand, redstone clock, etc"
-		},						
+		},					
+		{
+			"file": "twilightforest-1.7.10-2.3.7.jar",
+			"type": "feature",
+			"description": "A whole new dimension to explore!"
+		},		
 		{
 			"file": "BiblioCraft[v1.10.6][MC1.7.10].jar",
 			"type": "aesthetic",
