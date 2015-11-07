@@ -180,6 +180,11 @@
 			"description": "A bunch of random useful stuff including builders wand, redstone clock, etc"
 		},					
 		{
+			"file": "compactmachines-1.7.10-1.20.jar",
+			"type": "feature",
+			"description": "Build amazing machines all in a single block!"				
+		},
+		{
 			"file": "twilightforest-1.7.10-2.3.7.jar",
 			"type": "feature",
 			"description": "A whole new dimension to explore!"
